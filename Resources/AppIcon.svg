@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- 淡绿色背景 -->
+  <rect width="1024" height="1024" fill="#A8E6A3"/>
+  
+  <!-- 白色键盘主体 -->
+  <rect x="200" y="400" width="624" height="380" rx="30" fill="#FFFFFF"/>
+  
+  <!-- 键盘按键 - 第一行 -->
+  <rect x="240" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="340" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="440" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="540" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="640" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="740" y="440" width="40" height="60" rx="8" fill="#E8E8E8"/>
+  
+  <!-- 键盘按键 - 第二行 -->
+  <rect x="240" y="520" width="100" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="360" y="520" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="460" y="520" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="560" y="520" width="80" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="660" y="520" width="120" height="60" rx="8" fill="#E8E8E8"/>
+  
+  <!-- 键盘按键 - 第三行（空格键） -->
+  <rect x="240" y="600" width="120" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="380" y="600" width="264" height="60" rx="8" fill="#E8E8E8"/>
+  <rect x="664" y="600" width="116" height="60" rx="8" fill="#E8E8E8"/>
+  
+  <!-- 黄色锁 - 锁身 -->
+  <rect x="440" y="240" width="144" height="120" rx="15" fill="#FFD700"/>
+  
+  <!-- 黄色锁 - 锁环 -->
+  <path d="M 470 240 Q 470 180 512 180 Q 554 180 554 240" 
+        stroke="#FFD700" 
+        stroke-width="24" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- 锁孔 -->
+  <circle cx="512" cy="290" r="18" fill="#8B7500"/>
+  <rect x="504" y="290" width="16" height="30" rx="4" fill="#8B7500"/>
+</svg>

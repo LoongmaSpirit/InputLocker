@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30366431353461382D643664 /* Models/InputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36663035336539622D383630 /* Models/InputMethod.swift */; };
+		30386661303561392D633132 /* App/InputLockerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34643439653537362D353563 /* App/InputLockerApp.swift */; };
+		30646435633238652D316439 /* Views/MenuBarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64316332623632392D376463 /* Views/MenuBarLabel.swift */; };
+		36363861653238332D646638 /* Views/MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37663733303465322D323035 /* Views/MenuBarView.swift */; };
+		36386637663235612D393162 /* Services/InputMethodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34366233383539662D616564 /* Services/InputMethodService.swift */; };
+		37663535646637642D353239 /* Services/PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62643133376637352D613862 /* Services/PersistenceService.swift */; };
+		39303231623563662D396436 /* ViewModels/MenuBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64306537396233622D386262 /* ViewModels/MenuBarViewModel.swift */; };
+		3D6C8B713000D49800EF5021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6C8B703000D49800EF5021 /* Assets.xcassets */; };
+		3D6C8B743000D49800EF5021 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6C8B733000D49800EF5021 /* Preview Assets.xcassets */; };
+		3D6C8B843000D49900EF5021 /* InputLockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6C8B833000D49900EF5021 /* InputLockerTests.swift */; };
+		3D6C8B8E3000D49900EF5021 /* InputLockerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6C8B8D3000D49900EF5021 /* InputLockerUITests.swift */; };
+		3D6C8B903000D49900EF5021 /* InputLockerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6C8B8F3000D49900EF5021 /* InputLockerUITestsLaunchTests.swift */; };
+		61313838366662632D643866 /* Services/LaunchAtLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32666364623662302D626434 /* Services/LaunchAtLoginService.swift */; };
+		61373037336266612D323638 /* Utilities/Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63316239363136372D313533 /* Utilities/Logger.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D6C8B803000D49900EF5021 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D6C8B613000D49700EF5021 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D6C8B683000D49700EF5021;
+			remoteInfo = InputLocker;
+		};
+		3D6C8B8A3000D49900EF5021 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D6C8B613000D49700EF5021 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D6C8B683000D49700EF5021;
+			remoteInfo = InputLocker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32666364623662302D626434 /* Services/LaunchAtLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/LaunchAtLoginService.swift; sourceTree = "<group>"; };
+		34366233383539662D616564 /* Services/InputMethodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/InputMethodService.swift; sourceTree = "<group>"; };
+		34643439653537362D353563 /* App/InputLockerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/InputLockerApp.swift; sourceTree = "<group>"; };
+		36663035336539622D383630 /* Models/InputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/InputMethod.swift; sourceTree = "<group>"; };
+		37663733303465322D323035 /* Views/MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MenuBarView.swift; sourceTree = "<group>"; };
+		3D6C8B693000D49700EF5021 /* InputLocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputLocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6C8B703000D49800EF5021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D6C8B733000D49800EF5021 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D6C8B7A3000D49800EF5021 /* InputLocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InputLocker.entitlements; sourceTree = "<group>"; };
+		3D6C8B7F3000D49900EF5021 /* InputLockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputLockerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6C8B833000D49900EF5021 /* InputLockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLockerTests.swift; sourceTree = "<group>"; };
+		3D6C8B893000D49900EF5021 /* InputLockerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputLockerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6C8B8D3000D49900EF5021 /* InputLockerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLockerUITests.swift; sourceTree = "<group>"; };
+		3D6C8B8F3000D49900EF5021 /* InputLockerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLockerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		62643133376637352D613862 /* Services/PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/PersistenceService.swift; sourceTree = "<group>"; };
+		63316239363136372D313533 /* Utilities/Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/Logger.swift; sourceTree = "<group>"; };
+		64306537396233622D386262 /* ViewModels/MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/MenuBarViewModel.swift; sourceTree = "<group>"; };
+		64316332623632392D376463 /* Views/MenuBarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MenuBarLabel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D6C8B663000D49700EF5021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C8B7C3000D49900EF5021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C8B863000D49900EF5021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D25D7E53000DEB9005220A8 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				3D6C8B733000D49800EF5021 /* Preview Assets.xcassets */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		3D6C8B603000D49700EF5021 = {
+			isa = PBXGroup;
+			children = (
+				3D6C8B6B3000D49700EF5021 /* InputLocker */,
+				3D6C8B823000D49900EF5021 /* InputLockerTests */,
+				3D6C8B8C3000D49900EF5021 /* InputLockerUITests */,
+				3D6C8B6A3000D49700EF5021 /* Products */,
+				3D25D7E53000DEB9005220A8 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		3D6C8B6A3000D49700EF5021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D6C8B693000D49700EF5021 /* InputLocker.app */,
+				3D6C8B7F3000D49900EF5021 /* InputLockerTests.xctest */,
+				3D6C8B893000D49900EF5021 /* InputLockerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D6C8B6B3000D49700EF5021 /* InputLocker */ = {
+			isa = PBXGroup;
+			children = (
+				34643439653537362D353563 /* App/InputLockerApp.swift */,
+				36663035336539622D383630 /* Models/InputMethod.swift */,
+				34366233383539662D616564 /* Services/InputMethodService.swift */,
+				62643133376637352D613862 /* Services/PersistenceService.swift */,
+				32666364623662302D626434 /* Services/LaunchAtLoginService.swift */,
+				64306537396233622D386262 /* ViewModels/MenuBarViewModel.swift */,
+				37663733303465322D323035 /* Views/MenuBarView.swift */,
+				64316332623632392D376463 /* Views/MenuBarLabel.swift */,
+				63316239363136372D313533 /* Utilities/Logger.swift */,
+				3D6C8B703000D49800EF5021 /* Assets.xcassets */,
+				3D6C8B7A3000D49800EF5021 /* InputLocker.entitlements */,
+			);
+			path = InputLocker;
+			sourceTree = "<group>";
+		};
+		3D6C8B823000D49900EF5021 /* InputLockerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D6C8B833000D49900EF5021 /* InputLockerTests.swift */,
+			);
+			path = InputLockerTests;
+			sourceTree = "<group>";
+		};
+		3D6C8B8C3000D49900EF5021 /* InputLockerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D6C8B8D3000D49900EF5021 /* InputLockerUITests.swift */,
+				3D6C8B8F3000D49900EF5021 /* InputLockerUITestsLaunchTests.swift */,
+			);
+			path = InputLockerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D6C8B683000D49700EF5021 /* InputLocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6C8B933000D49900EF5021 /* Build configuration list for PBXNativeTarget "InputLocker" */;
+			buildPhases = (
+				3D6C8B653000D49700EF5021 /* Sources */,
+				3D6C8B663000D49700EF5021 /* Frameworks */,
+				3D6C8B673000D49700EF5021 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InputLocker;
+			productName = InputLocker;
+			productReference = 3D6C8B693000D49700EF5021 /* InputLocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D6C8B7E3000D49900EF5021 /* InputLockerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6C8B963000D49900EF5021 /* Build configuration list for PBXNativeTarget "InputLockerTests" */;
+			buildPhases = (
+				3D6C8B7B3000D49900EF5021 /* Sources */,
+				3D6C8B7C3000D49900EF5021 /* Frameworks */,
+				3D6C8B7D3000D49900EF5021 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D6C8B813000D49900EF5021 /* PBXTargetDependency */,
+			);
+			name = InputLockerTests;
+			productName = InputLockerTests;
+			productReference = 3D6C8B7F3000D49900EF5021 /* InputLockerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D6C8B883000D49900EF5021 /* InputLockerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6C8B993000D49900EF5021 /* Build configuration list for PBXNativeTarget "InputLockerUITests" */;
+			buildPhases = (
+				3D6C8B853000D49900EF5021 /* Sources */,
+				3D6C8B863000D49900EF5021 /* Frameworks */,
+				3D6C8B873000D49900EF5021 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D6C8B8B3000D49900EF5021 /* PBXTargetDependency */,
+			);
+			name = InputLockerUITests;
+			productName = InputLockerUITests;
+			productReference = 3D6C8B893000D49900EF5021 /* InputLockerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D6C8B613000D49700EF5021 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3D6C8B683000D49700EF5021 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					3D6C8B7E3000D49900EF5021 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3D6C8B683000D49700EF5021;
+					};
+					3D6C8B883000D49900EF5021 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3D6C8B683000D49700EF5021;
+					};
+				};
+			};
+			buildConfigurationList = 3D6C8B643000D49700EF5021 /* Build configuration list for PBXProject "InputLocker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D6C8B603000D49700EF5021;
+			productRefGroup = 3D6C8B6A3000D49700EF5021 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D6C8B683000D49700EF5021 /* InputLocker */,
+				3D6C8B7E3000D49900EF5021 /* InputLockerTests */,
+				3D6C8B883000D49900EF5021 /* InputLockerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D6C8B673000D49700EF5021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6C8B743000D49800EF5021 /* Preview Assets.xcassets in Resources */,
+				3D6C8B713000D49800EF5021 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C8B7D3000D49900EF5021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C8B873000D49900EF5021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D6C8B653000D49700EF5021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30386661303561392D633132 /* App/InputLockerApp.swift in Sources */,
+				30366431353461382D643664 /* Models/InputMethod.swift in Sources */,
+				36386637663235612D393162 /* Services/InputMethodService.swift in Sources */,
+				37663535646637642D353239 /* Services/PersistenceService.swift in Sources */,
+				61313838366662632D643866 /* Services/LaunchAtLoginService.swift in Sources */,
+				39303231623563662D396436 /* ViewModels/MenuBarViewModel.swift in Sources */,
+				36363861653238332D646638 /* Views/MenuBarView.swift in Sources */,
+				30646435633238652D316439 /* Views/MenuBarLabel.swift in Sources */,
+				61373037336266612D323638 /* Utilities/Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C8B7B3000D49900EF5021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6C8B843000D49900EF5021 /* InputLockerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C8B853000D49900EF5021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6C8B8E3000D49900EF5021 /* InputLockerUITests.swift in Sources */,
+				3D6C8B903000D49900EF5021 /* InputLockerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D6C8B813000D49900EF5021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D6C8B683000D49700EF5021 /* InputLocker */;
+			targetProxy = 3D6C8B803000D49900EF5021 /* PBXContainerItemProxy */;
+		};
+		3D6C8B8B3000D49900EF5021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D6C8B683000D49700EF5021 /* InputLocker */;
+			targetProxy = 3D6C8B8A3000D49900EF5021 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3D6C8B913000D49900EF5021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D6C8B923000D49900EF5021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3D6C8B943000D49900EF5021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InputLocker/InputLocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InputLocker/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loongma.InputLocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3D6C8B953000D49900EF5021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InputLocker/InputLocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InputLocker/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loongma.InputLocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3D6C8B973000D49900EF5021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loongma.InputLockerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputLocker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InputLocker";
+			};
+			name = Debug;
+		};
+		3D6C8B983000D49900EF5021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loongma.InputLockerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputLocker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InputLocker";
+			};
+			name = Release;
+		};
+		3D6C8B9A3000D49900EF5021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loongma.InputLockerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = InputLocker;
+			};
+			name = Debug;
+		};
+		3D6C8B9B3000D49900EF5021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loongma.InputLockerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = InputLocker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D6C8B643000D49700EF5021 /* Build configuration list for PBXProject "InputLocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6C8B913000D49900EF5021 /* Debug */,
+				3D6C8B923000D49900EF5021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6C8B933000D49900EF5021 /* Build configuration list for PBXNativeTarget "InputLocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6C8B943000D49900EF5021 /* Debug */,
+				3D6C8B953000D49900EF5021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6C8B963000D49900EF5021 /* Build configuration list for PBXNativeTarget "InputLockerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6C8B973000D49900EF5021 /* Debug */,
+				3D6C8B983000D49900EF5021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6C8B993000D49900EF5021 /* Build configuration list for PBXNativeTarget "InputLockerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6C8B9A3000D49900EF5021 /* Debug */,
+				3D6C8B9B3000D49900EF5021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D6C8B613000D49700EF5021 /* Project object */;
+}
