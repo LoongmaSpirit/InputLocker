@@ -18,8 +18,7 @@ class MenuBarViewModel: ObservableObject {
     private let inputMethodService = InputMethodService.shared
     // 持久化服务实例
     private let persistenceService = PersistenceService.shared
-    // 开机自启动服务实例（需要 macOS 13.0+）
-    @available(macOS 13.0, *)
+    // 开机自启动服务实例（支持所有 macOS 版本）
     private var launchAtLoginService: LaunchAtLoginService {
         return LaunchAtLoginService.shared
     }
@@ -66,10 +65,8 @@ class MenuBarViewModel: ObservableObject {
                 Logger.shared.info("开机自启动\(enabled ? "启用" : "禁用")")
                 // 保存设置到持久化服务
                 self.persistenceService.launchAtLogin = enabled
-                // 同步到开机自启动服务
-                if #available(macOS 13.0, *) {
-                    self.launchAtLoginService.isEnabled = enabled
-                }
+                // 同步到开机自启动服务（支持所有 macOS 版本）
+                self.launchAtLoginService.isEnabled = enabled
             }
             .store(in: &cancellables)
         
