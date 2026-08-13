@@ -29,21 +29,39 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.shared.info("InputLocker 启动")
         
+        // 作为纯菜单栏（Agent）应用运行，不显示 Dock 图标。
+        // Info.plist 中已设置 LSUIElement = YES，二者保持一致。
+        NSApp.setActivationPolicy(.accessory)
+        
         // 初始化视图模型
         viewModel = MenuBarViewModel()
         
-        // 创建菜单栏状态项
-        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        
-        // 设置菜单栏按钮的图标和点击事件
-        if let button = statusItem?.button {
-            updateStatusItemIcon(button)
-            button.action = #selector(statusItemClicked(_:))
-            button.target = self
-        }
-        
         // 设置视图模型的观察者，监听状态变化
         setupViewModelObservers()
+        
+        // macOS 15 (Sequoia) 回归修复：
+        // SwiftUI App 生命周期下，若在 applicationDidFinishLaunching 内同步创建
+        // NSStatusItem，菜单栏窗口尚未就绪，状态项不会出现在菜单栏。
+        // 延迟到下一个 RunLoop 周期再创建即可稳定显示。
+        DispatchQueue.main.async { [weak self] in
+            self?.setupStatusItem()
+        }
+    }
+    
+    // 创建菜单栏状态项（需在 RunLoop 已就绪后调用）
+    private func setupStatusItem() {
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        
+        // 设置菜单栏按钮的图标
+        if let button = statusItem?.button {
+            updateStatusItemIcon(button)
+        }
+        
+        // 将菜单直接挂到 statusItem.menu，由 AppKit 在点击时原生弹出；
+        // 不再使用 button.action + performClick(nil) 的手动触发方式
+        // （该方式在 macOS 15 下不可靠）。
+        let menu = buildMenu()
+        statusItem?.menu = menu
     }
     
     // 应用即将退出时调用
@@ -81,25 +99,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         button.image = NSImage(systemSymbolName: iconName, accessibilityDescription: "InputLocker")
     }
     
-    // 菜单栏按钮点击事件处理
-    @objc private func statusItemClicked(_ sender: Any?) {
-        // 构建并显示菜单
-        let menu = buildMenu()
-        menu.delegate = self
-        statusItem?.menu = menu
-        statusItem?.button?.performClick(nil)
-    }
-    
-    // 菜单关闭时清空菜单引用
-    func menuDidClose(_ menu: NSMenu) {
-        statusItem?.menu = nil
+    // 菜单即将弹出时重建内容，确保勾选状态与视图模型当前值一致
+    func menuWillOpen(_ menu: NSMenu) {
+        populateMenu(menu)
     }
     
     // 构建菜单栏菜单
     private func buildMenu() -> NSMenu {
-        guard let viewModel = viewModel else { return NSMenu() }
-        
         let menu = NSMenu()
+        menu.delegate = self
+        populateMenu(menu)
+        return menu
+    }
+    
+    // 将当前视图模型状态写入菜单项（每次弹出前调用，保证勾选状态最新）
+    private func populateMenu(_ menu: NSMenu) {
+        guard let viewModel = viewModel else { return }
+        menu.removeAllItems()
+
         
         // 标题项
         let titleItem = NSMenuItem(title: "Input Lock", action: nil, keyEquivalent: "")
@@ -161,8 +178,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let quitItem = NSMenuItem(title: "Quit InputLocker", action: #selector(quitApp(_:)), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
-        
-        return menu
     }
     
     // 切换锁定状态
