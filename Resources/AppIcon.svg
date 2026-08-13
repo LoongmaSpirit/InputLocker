@@ -1,41 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <!-- 淡绿色背景 -->
-  <rect width="1024" height="1024" fill="#A8E6A3"/>
-  
-  <!-- 白色键盘主体 -->
-  <rect x="200" y="400" width="624" height="380" rx="30" fill="#FFFFFF"/>
-  
-  <!-- 键盘按键 - 第一行 -->
-  <rect x="240" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="340" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="440" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="540" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="640" y="440" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="740" y="440" width="40" height="60" rx="8" fill="#E8E8E8"/>
-  
-  <!-- 键盘按键 - 第二行 -->
-  <rect x="240" y="520" width="100" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="360" y="520" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="460" y="520" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="560" y="520" width="80" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="660" y="520" width="120" height="60" rx="8" fill="#E8E8E8"/>
-  
-  <!-- 键盘按键 - 第三行（空格键） -->
-  <rect x="240" y="600" width="120" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="380" y="600" width="264" height="60" rx="8" fill="#E8E8E8"/>
-  <rect x="664" y="600" width="116" height="60" rx="8" fill="#E8E8E8"/>
-  
-  <!-- 黄色锁 - 锁身 -->
-  <rect x="440" y="240" width="144" height="120" rx="15" fill="#FFD700"/>
-  
-  <!-- 黄色锁 - 锁环 -->
-  <path d="M 470 240 Q 470 180 512 180 Q 554 180 554 240" 
-        stroke="#FFD700" 
-        stroke-width="24" 
-        fill="none" 
-        stroke-linecap="round"/>
-  
-  <!-- 锁孔 -->
-  <circle cx="512" cy="290" r="18" fill="#8B7500"/>
-  <rect x="504" y="290" width="16" height="30" rx="4" fill="#8B7500"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a1a6e"/>
+      <stop offset="0.35" stop-color="#5b2a9e"/>
+      <stop offset="0.7" stop-color="#1f5fd0"/>
+      <stop offset="1" stop-color="#15c7d6"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0a30" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0b0a30" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="shackle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#cfe6ff" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#8fb8ff" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="globe" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="0.7" stop-color="#bfe0ff" stop-opacity="0.68"/>
+      <stop offset="1" stop-color="#3aa0ff" stop-opacity="0.52"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="0.35" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="caustic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="blobM" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff5db1" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ff5db1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22e3ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#22e3ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobV" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a06bff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#a06bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3b7bff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#3b7bff" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurBig" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="44"/>
+    </filter>
+    <filter id="blurMed" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="blurSm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="20" stdDeviation="32" flood-color="#0a0a2a" flood-opacity="0.42"/>
+    </filter>
+
+    <clipPath id="tile">
+      <rect x="0" y="0" width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+    <clipPath id="body">
+      <rect x="332" y="430" width="360" height="340" rx="76" ry="76"/>
+    </clipPath>
+    <clipPath id="globeClip">
+      <circle cx="512" cy="600" r="92"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <g clip-path="url(#tile)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#bg)"/>
+    <!-- aurora blobs -->
+    <g filter="url(#blurBig)">
+      <circle cx="300" cy="270" r="320" fill="url(#blobM)"/>
+      <circle cx="800" cy="310" r="300" fill="url(#blobC)"/>
+      <circle cx="490" cy="820" r="360" fill="url(#blobV)"/>
+      <circle cx="860" cy="830" r="280" fill="url(#blobB)"/>
+      <circle cx="160" cy="770" r="260" fill="url(#blobC)"/>
+    </g>
+    <!-- soft bottom vignette for depth -->
+    <rect x="0" y="640" width="1024" height="384" fill="url(#vignette)" opacity="0.28"/>
+  </g>
+
+  <!-- lock group with shadow -->
+  <g filter="url(#shadow)">
+    <!-- shackle -->
+    <path d="M 420 548 L 420 430 A 92 92 0 0 1 604 430 L 604 548"
+          fill="none" stroke="url(#shackle)" stroke-width="48"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- shackle top highlight -->
+    <path d="M 420 548 L 420 430 A 92 92 0 0 1 604 430 L 604 548"
+          fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="9"
+          stroke-linecap="round" stroke-linejoin="round"
+          transform="translate(-4,-3)"/>
+
+    <!-- glass body -->
+    <rect x="332" y="430" width="360" height="340" rx="76" ry="76" fill="url(#glass)"/>
+  </g>
+
+  <!-- refraction + details clipped to body -->
+  <g clip-path="url(#body)">
+    <!-- refracted color -->
+    <g filter="url(#blurMed)" opacity="0.95">
+      <circle cx="430" cy="545" r="155" fill="url(#blobC)"/>
+      <circle cx="615" cy="705" r="165" fill="url(#blobM)"/>
+      <circle cx="520" cy="470" r="125" fill="url(#blobB)"/>
+      <circle cx="380" cy="690" r="110" fill="url(#blobV)"/>
+    </g>
+    <!-- frost overlay -->
+    <rect x="332" y="430" width="360" height="340" fill="#ffffff" opacity="0.22"/>
+    <!-- inner top highlight -->
+    <ellipse cx="512" cy="470" rx="155" ry="42" fill="#ffffff" opacity="0.38" filter="url(#blurSm)"/>
+    <!-- caustic sheen -->
+    <ellipse cx="410" cy="500" rx="120" ry="70" fill="url(#caustic)" opacity="0.35" filter="url(#blurSm)" transform="rotate(-35 410 500)"/>
+
+    <!-- globe symbol (input source), clipped to its circle -->
+    <g clip-path="url(#globeClip)">
+      <circle cx="512" cy="600" r="92" fill="url(#globe)"/>
+      <circle cx="512" cy="600" r="92" fill="none" stroke="#ffffff" stroke-opacity="0.65" stroke-width="2.5"/>
+      <line x1="420" y1="600" x2="604" y2="600" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+      <line x1="512" y1="508" x2="512" y2="692" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+      <path d="M 512 508 A 92 36 0 0 0 512 692 A 92 36 0 0 0 512 508" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+      <path d="M 420 600 A 36 92 0 0 0 604 600 A 36 92 0 0 0 420 600" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+    </g>
+
+    <!-- specular sheen -->
+    <rect x="332" y="430" width="360" height="340" fill="url(#sheen)" opacity="0.55" transform="rotate(-20 512 600)"/>
+  </g>
+
+  <!-- rim light on body -->
+  <rect x="332" y="430" width="360" height="340" rx="76" ry="76" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2.5"/>
 </svg>
